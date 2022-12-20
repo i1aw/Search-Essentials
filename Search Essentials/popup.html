@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css" >
+body {
+    min-width: 220px;
+    max-width: 100%;
+    position: relative;
+    vertical-align:middle;
+    background-color: rgb(255, 255, 255);
+    user-select: none;
+    font-family: Calibri;
+}
+input {
+    appearance: none;
+    position: relative;
+    width: 30px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: rgb(255, 183, 183);
+    transition: background .25s;
+    outline: none;
+    cursor: pointer;
+    transform: translate(0%,40%);
+
+}
+input::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    height: 0.65rem;
+    width: 0.65rem;
+    background-color: rgb(255, 255, 255);
+    transition: left .25s;
+}
+input:checked {
+    background-color: rgb(147, 255, 174);
+
+
+}
+input:checked::after {
+
+    left: 75%;
+
+}
+.center {
+    text-align: center;
+    font-weight: 600;
+
+
+}
+.warning {
+    color: rgb(165, 23, 23);
+    font-weight: 650;
+
+}
+
+
+
+</style >
+<head><title>Search Essentials Options</title></head>
+<body>
+    <div class="center">Search Essentials Options<br></div>
+    
+
+<label>
+
+  <input type="checkbox" id="ads">  
+  Remove ads <br>
+</label>
+<label>
+    
+    <input type="checkbox" id="rs">  
+    Remove related searches <br>
+</label>
+<label>
+    
+    <input type="checkbox" id="rhs">  
+    Remove side bar<br>
+</label>
+<label>
+    
+    <input type="checkbox" id="ULS">  
+    Remove videos and news <FONT class="warning">BETA </FONT><br>
+</label>
+
+
+<script src="options.js"></script>
+</body>
+
+</html>

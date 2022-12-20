@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Search Essentials",
+    "version": "1.0",
+    "description": "This extension removes unwanted content from Google search results.",
+    "author": "Collin",
+    "action" : {
+      "default_popup":"popup.html",
+      "defualt_title":"Search Essentials"
+    },
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "permissions": [
+      "https://www.google.com/*",
+      "activeTab",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.google.com/search*"
+        ],
+        "js": ["index.js"]
+      }
+    ]
+}
+  
